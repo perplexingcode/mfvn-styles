@@ -1,0 +1,268 @@
+/* --- My Account --- */
+/* Base */
+#page-my-account {
+  .nav-wrapper {
+    display: flex;
+  }
+  .nav-card {
+    border: 0;
+    background: none;
+  }
+
+  .nav-item.active > a {
+    background: #d1d1e5;
+    color: #282828;
+    border-radius: 26px;
+  }
+
+  .nav-link {
+    color: #717171;
+  }
+
+  .cancel-confirm > div,
+  .submit-btn-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card-header {
+    background-color: #fff;
+  }
+
+  .submit-btn-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  #shortcode-account-info .submit-btn-wrapper {
+    margin-top: -0.5rem;
+  }
+
+  /* Desktop */
+  @media screen and (min-width: 768px) {
+    .mm-my_account {
+      padding-top: 8.5rem;
+      & > .row {
+        justify-content: center;
+      }
+    }
+    .my_account-title {
+      position: absolute;
+      top: -5rem;
+    }
+    .nav-wrapper {
+      max-width: 500px;
+      position: relative;
+      padding-top: 3rem;
+      flex-direction: column;
+      align-content: center;
+    }
+    .content-wrapper {
+      min-width: 50vw;
+      max-width: 1000px;
+    }
+    .nav-card {
+      margin-left: auto;
+      width: 100%;
+    }
+    .nav {
+      gap: 5px;
+    }
+
+    .nav-item.active > a {
+      padding: 10px 10px 10px 16px;
+    }
+
+    .card-header {
+      border-bottom: 0;
+      padding-top: 3.5rem;
+      padding-left: 3rem;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+    .card-body {
+      padding: 2rem 3rem 4.25rem 3rem;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  }
+
+  /* Mobile */
+  @media screen and (max-width: 767px) {
+    button[type='submit'] {
+      width: 100%;
+    }
+
+    .mm-my_account > .row {
+      flex-direction: column;
+    }
+
+    .nav-wrapper {
+      flex-direction: column;
+      padding-top: 2rem;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+
+    .nav {
+      flex-direction: row;
+      align-items: center;
+      overflow-x: scroll;
+      width: 100vw;
+
+      scroll-snap-type: x proximity;
+    }
+
+    .nav-item {
+      &:first-child {
+        padding-left: 1rem;
+      }
+      &:nth-child(2).active {
+        scroll-snap-align: center;
+      }
+      &:last-child {
+        padding-right: 1rem;
+        margin-right: -10rem;
+        &.active {
+          scroll-snap-align: end;
+        }
+      }
+    }
+    .my_account-title {
+      margin-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .content-wrapper,
+    .nav-wrapper {
+      margin-left: 0;
+      margin-right: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .card {
+      border-left: 0;
+      border-right: 0;
+      border-radius: 0;
+    }
+
+    .card-header {
+      display: none;
+    }
+
+    .card-body {
+      padding: 2rem 2.25rem 1rem 2.25rem;
+    }
+
+    .info-box {
+      padding-left: 0;
+      padding-right: 0;
+      height: 3rem;
+      margin-top: -1rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .nav-item.active > a {
+      padding: 3px 16px 5px 16px;
+      height: 2rem;
+    }
+  }
+
+  #page-subscription {
+    .cancel-confirm {
+      background: #f2f2f2;
+      padding: 1.5rem;
+      border-radius: 4px;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      div {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-content: stretch;
+      }
+      input {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+
+  #page-change-password {
+    /* ??? */
+    .new-pass-inputs {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .row > div {
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .new-pass-section {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem;
+      border: 1px solid #d6d6d6;
+      border-radius: 12px;
+      margin-bottom: 1.75rem;
+    }
+
+    .show-hide-new-pass,
+    .show-hide-current-pass {
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      right: 0;
+      bottom: 1rem;
+      z-index: 10000;
+    }
+
+    .new-pass-check {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      background: #f2f2f2;
+      border-radius: 4px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .check-title {
+      line-height: 200%;
+    }
+
+    .check-wrapper {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0.5rem;
+      gap: 0.5rem;
+      img {
+        width: 10px;
+        height: 11px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    #page-subscription .cancel-confirm p {
+      padding-left: 0;
+    }
+
+    #page-change-password {
+      .new-pass-inputs {
+        order: 1;
+        margin-top: 1rem;
+        .row > div {
+          padding-right: 0;
+        }
+      }
+      .new-pass-section {
+        padding: 0.75rem;
+      }
+    }
+  }
+}

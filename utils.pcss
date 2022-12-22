@@ -1,0 +1,70 @@
+body {
+  overflow-x: hidden;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+/* - Ultilities */
+em,
+.em {
+  color: var(--mm-primary-color);
+  font-style: normal;
+}
+
+.no-height {
+  height: 0px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.extra-bold {
+  font-weight: 800;
+}
+
+.p-fit-y {
+  line-height: 100%;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Member */
+/* used in: nav bar */
+.logged-in .guest-only {
+  display: none !important;
+}
+
+.logged-in .member-only {
+  display: block !important;
+}
+
+.mm-non-logged-in .member-only {
+  display: none !important;
+}
+
+.mm-non-logged-in .guest-only {
+  display: block !important;
+}
+
+/* Screen */
+/* used in: nav bar */
+@media screen and (max-width: 767px) {
+  .elementor .desktop-only {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  .elementor .mobile-only {
+    display: none !important;
+  }
+}
